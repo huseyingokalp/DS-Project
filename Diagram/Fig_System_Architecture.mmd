@@ -1,0 +1,45 @@
+---
+config:
+  layout: dagre
+---
+flowchart BT
+    classDef cloud fill:#e1f5fe,stroke:#01579b,stroke-width:2px;
+    classDef edge fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px;
+    classDef iot fill:#fff3e0,stroke:#ef6c00,stroke-width:2px;
+    classDef process fill:#ffffff,stroke:#424242,stroke-width:1px;
+    classDef xai fill:#ffe0b2,stroke:#e65100,stroke-width:2px,stroke-dasharray: 5 5;
+    subgraph Tier1 ["Tier 1: IoT / Device Layer (Ground)"]
+        direction LR
+        Crops["🌱 Agricultural Field (Crops)"]
+        Sensors["📡 Stationary Soil Sensors"]
+    end
+    class Tier1 iot;
+    subgraph Tier2 ["Tier 2: Edge Layer (UAV Fleet)"]
+        direction TB
+        Raw["Raw Multispectral Image<br/>(~25 MB)"]:::process
+        DNN["Lightweight DNN<br/>(Early Exit Check)"]:::process
+        GradCAM["XAI Module: Grad-CAM<br/>(Heatmap Generation)"]:::xai
+        Cropping["Spatial Cropping<br/>(Zeroing Healthy Pixels)"]:::xai
+        ROI["Compressed ROI<br/>(~15-30% Payload)"]:::process
+        DQN["DRL Agent (DQN)<br/>(Offloading Decision)"]:::process
+        LocalExec["Local Execution<br/>(xi=0)"]:::process
+
+        Raw --> DNN
+        DNN --> GradCAM
+        GradCAM --> Cropping
+        Cropping --> ROI
+        ROI --> DQN
+        DQN -->|"xi=0"| LocalExec
+    end
+    class Tier2 edge;
+    subgraph Tier3 ["Tier 3: Cloud Layer (Centralized)"]
+        direction LR
+        Server["☁️ Centralized Cloud Servers<br/>(Heavy Computation)"]
+        Global["🗄️ Global Aggregation & Analysis"]
+        
+        Server --> Global
+    end
+    class Tier3 cloud;
+    Crops -.->|"Image Acquisition"| Raw
+    Sensors -.->|"Context Data"| Tier2
+    DQN ==>|"xi=1<br/>Transmitting Compressed ROI Only<br/>(Wireless Channel)"| Server
