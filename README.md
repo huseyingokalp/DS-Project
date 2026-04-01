@@ -21,20 +21,22 @@ UAV fleets deployed in precision agriculture generate high-resolution multispect
 ```
 DS-Project/
 ├── Analyse/
-│   ├── Comparative_Analysis.ipynb              # Phase I deterministic baseline simulation
-│   ├── Improved_Comparative_Analysis_v1.ipynb  # Phase II/III stochastic simulations (ongoing)
-│   ├── fig1_latency_revised.png                # Avg. end-to-end latency (Phase II/III)
-│   ├── fig2_energy_revised.png                 # Avg. UAV energy consumption (Phase II/III)
-│   ├── fig3_success_revised.png                # Task success ratio
-│   ├── fig4_bar_summary_N50.png                # N=50 summary comparison
-│   ├── fig5_radar_chart_N50.png                # Multi-dimensional radar chart
-│   ├── fig6a_efficiency.png                    # Energy efficiency (EE)
-│   ├── fig6b_offload.png                       # Cloud offload ratio
-│   ├── fig6c_fairness.png                      # Jain's Fairness Index (JFI)
-│   ├── fig7_improvement_heatmap.png            # Improvement heatmap
-│   ├── results_latency.png                     # Phase I latency results
-│   ├── results_energy.png                      # Phase I energy results
-│   └── results_success.png                     # Phase I success results
+│   ├── Phase I/
+│   │   ├── Comparative_Analysis.ipynb              # Phase I deterministic baseline simulation
+│   │   ├── results_latency.png                     # Phase I latency results
+│   │   ├── results_energy.png                      # Phase I energy results
+│   │   └── results_success.png                     # Phase I success results
+│   ├── Phase II-III/
+│   │   ├── Improved_Comparative_Analysis_v1.ipynb  # Phase II/III stochastic simulations (ongoing)
+│   │   ├── fig1_latency_revised.png                # Avg. end-to-end latency (Phase II/III)
+│   │   ├── fig2_energy_revised.png                 # Avg. UAV energy consumption (Phase II/III)
+│   │   ├── fig3_success_revised.png                # Task success ratio
+│   │   ├── fig4_bar_summary_N50.png                # N=50 summary comparison
+│   │   ├── fig5_radar_chart_N50.png                # Multi-dimensional radar chart
+│   │   ├── fig6a_efficiency.png                    # Energy efficiency (EE)
+│   │   ├── fig6b_offload.png                       # Cloud offload ratio
+│   │   ├── fig6c_fairness.png                      # Jain's Fairness Index (JFI)
+│   │   └── fig7_improvement_heatmap.png            # Improvement heatmap
 ├── Diagram/
 │   ├── Fig_System_Architecture.mmd             # Three-tier architecture (Mermaid source)
 │   ├── Fig_System_Architecture.png             # System architecture figure
