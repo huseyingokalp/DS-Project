@@ -1,4 +1,4 @@
-# Energy-Aware Hybrid Edge-Cloud Computing for UAV Plant Health Analysis
+# Energy-Aware Hybrid Edge-Cloud Computing Architecture for Real-Time Plant Health Analysis in Resource-Constrained UAV Networks 
 
 > **11117BLG016 Distributed Systems** — Süleyman Demirel University  
 > **Student:** Hüseyin GÖKALP · d2540138002@ogr.sdu.edu.tr  
