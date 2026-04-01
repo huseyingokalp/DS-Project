@@ -146,5 +146,5 @@ pip install edge-sim-py gymnasium torch numpy matplotlib
 ```
 
 Run the notebooks in order:
-1. `Analyse/Comparative_Analysis.ipynb` → Phase I baseline
-2. `Analyse/Improved_Comparative_Analysis_v1.ipynb` → Phase II/III stochastic simulations
+1. `Analyse/Phase I/Comparative_Analysis.ipynb` → Phase I baseline
+2. `Analyse/Phase II-III/Improved_Comparative_Analysis_v1.ipynb` → Phase II/III stochastic simulations
