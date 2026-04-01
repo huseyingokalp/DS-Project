@@ -1,0 +1,23 @@
+---
+config:
+  layout: dagre
+---
+flowchart LR
+    subgraph UAV ["UAV Onboard Processing (Edge Layer)"]
+        direction LR
+        A[/"Raw Multispectral Image\nSize: ~25 MB\n(Disease + Healthy Canopy + Soil)"\/]
+        B{"XAI Filtering Layer\nGrad-CAM Heatmap\n+ ReLU Activation"}
+        C[/"Compressed ROI Payload\nSize: ~4.5 MB\n(Pathogenic Patches ONLY)"//]
+        
+        A -- "Initial Data" --> B
+        B -- "Zeroes out healthy & background pixels\n(Spatial Cropping)" --> C
+    end
+
+    Cloud(("Cloud Server<br/>Centralized Layer"))
+
+    C == "Wireless Offloading<br/>~82% Data Reduction" ==> Cloud
+    style A fill:#f8cecc,stroke:#b85450,stroke-width:2px
+    style B fill:#fff2cc,stroke:#d6b656,stroke-width:2px
+    style C fill:#d5e8d4,stroke:#82b366,stroke-width:2px
+    style Cloud fill:#dae8fc,stroke:#6c8ebf,stroke-width:2px
+    style UAV fill:#f9f9f9,stroke:#666666,stroke-width:2px,stroke-dasharray: 5 5
