@@ -1,6 +1,6 @@
 # Energy-Aware Hybrid Edge-Cloud Computing for Real-Time Plant Health Analysis in UAV Networks
 
-> Repurposing **Grad-CAM (XAI)** as a *pre-transmission data-compression* mechanism to cut UAV offloading energy, evaluated through a four-phase progressive framework on **EdgeSimPy + EdgeAISim**.
+> Purposing **Grad-CAM (XAI)** as a *pre-transmission data-compression* mechanism to cut UAV offloading energy, evaluated through a four-phase progressive framework on **EdgeSimPy + EdgeAISim**.
 
 [![Python](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/)
 [![Simulator](https://img.shields.io/badge/Simulator-EdgeSimPy%20%2B%20EdgeAISim-green.svg)](https://github.com/EdgeSimPy/EdgeSimPy)
