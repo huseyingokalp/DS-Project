@@ -5,13 +5,13 @@
 #  Course   : 11117BLG016 Distributed Systems — Final Project
 #  Author   : Hüseyin Gökalp — Süleyman Demirel University
 #
-#  This module operationalises the four "future-work / limitation" items that
-#  the Week-7 manuscript had explicitly deferred, converting each into a
-#  reproducible quantitative experiment built on the *identical* simulation
-#  core (sim_core.py) used for Phases I–III. All four analyses share the
-#  Table-II parameters, the Eq.(7)–(8) channel model and the Eq.(12) CPU
-#  contention model, so their outputs are directly comparable with the
-#  Phase III results table.
+#  This module operationalises the four "future-work / limitation" items
+#  identified during the final project development and report preparation
+#  process, converting each into a reproducible quantitative experiment
+#  built on the *identical* simulation core (sim_core.py) used for Phases I–III.
+#  All four analyses share the Table-II parameters, the Eq.(7)–(8) channel model
+#  and the Eq.(12) CPU contention model, so their outputs are directly comparable with
+#  the Phase III results table.
 #
 #    Phase IV-A : Grad-CAM Overhead-Aware NET Energy Model
 #                 (Limitation #1 — XAI compute/energy overhead abstracted)
